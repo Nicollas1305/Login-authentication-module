@@ -27,7 +27,7 @@ class CustomUserManager(BaseUserManager):
 class CustomUser(AbstractBaseUser):
     email = models.EmailField(unique=True)
     nome = models.CharField(max_length=150)
-    foto_perfil = models.ImageField(upload_to='profile_pics/', null=True, blank=True)
+    foto_perfil = models.ImageField(upload_to='assets/profile_pics/', null=True, blank=True)
     data_nascimento = models.DateField(null=True, blank=True)
     telefone = models.CharField(max_length=20, null=True, blank=True)
     endereco = models.CharField(max_length=255, null=True, blank=True)
